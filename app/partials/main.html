@@ -1,0 +1,23 @@
+<fa-app class="full-screen">
+
+  <fa-modifier fa-origin="[.5, .5]">
+    <fa-modifier fa-rotate-y="rotateY.get()">
+      <fa-grid-layout fa-options="gridLayoutOptions">
+        <fa-modifier ng-repeat="card in cards">
+          <fa-surface fa-click="flip(card)"
+                    fa-size="[true, true]"
+                    fa-color="'rgb(255,255,250)'">
+            <div style="background: red; border: 1px solid black; padding: 20px; font-size: 64px;">{{card.card}}</div>
+          </fa-surface>
+        </fa-modifier>
+      </fa-grid-layout>
+
+        <fa-modifier  fa-scale="card.scale.get()" fa-rotate-y="3.14159">
+          <fa-surface fa-click="unflip()"  fa-size="[400, 400]">
+          <div style="background: blue; border: 1px solid black; text-align: center; width: 400px; height: 400px; line-height: 400px; font-size: 264px;">{{currentCard}}</div>
+          </fa-surface>
+        </fa-modifier>
+      </fa-modifier>
+  </fa-modifier>
+
+</fa-app>
