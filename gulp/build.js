@@ -26,7 +26,7 @@ gulp.task('partials', function () {
         quotes: true
       }))
       .pipe($.ngHtml2js({
-        moduleName: "famousAngularStarter",
+        moduleName: "scrumCards",
         prefix: "partials/"
       }))
       .pipe(gulp.dest(".tmp/partials"))
